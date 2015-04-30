@@ -2,6 +2,7 @@ import android.app.Activity;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.powermoves.aleckson.understatement.CustomRobolectricRunner;
 import com.powermoves.aleckson.understatement.MainActivity;
 import com.powermoves.aleckson.understatement.R;
 
@@ -9,6 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
+import org.robolectric.annotation.Config;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -18,6 +20,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
  */
 
 @RunWith(CustomRobolectricRunner.class)
+@Config(emulateSdk = 21)
 public class RobolectricTest {
 
     private Activity mActivity;

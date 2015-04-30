@@ -3,4 +3,8 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    //API
+    <string name="tmdb_key">137776cab398e5804d7b33f2b3d1d1fd</string>
+
 </resources>

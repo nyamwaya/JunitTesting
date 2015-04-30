@@ -7,22 +7,30 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.powermoves.aleckson.understatement.Util.RestClient;
+
 
 public class MainActivity extends Activity {
 
+
     private Button mButton;
     private TextView mTextView;
+    private RestClient restclient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        restclient = new RestClient(this);
 
-        mButton = (Button) findViewById(R.id.hi);
-        mTextView = (TextView) findViewById(R.id.text_view);
+
+
 
     }
+
+
+
 
 
 
