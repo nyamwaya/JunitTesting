@@ -2,19 +2,21 @@ package com.powermoves.aleckson.understatement;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.TextView;
 
+import com.powermoves.aleckson.understatement.Adapters.ShowAdapter;
 import com.powermoves.aleckson.understatement.Util.RestClient;
 
 
 public class MainActivity extends Activity {
 
 
-    private Button mButton;
-    private TextView mTextView;
+
+    private RecyclerView mRecyclerView;
+    private ShowAdapter mShowAdapter;
     private RestClient restclient;
 
     @Override
@@ -23,6 +25,10 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         restclient = new RestClient(this);
+
+        //RecyclerView
+        mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
 
